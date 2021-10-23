@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rock, Paper, Sisors</title>
+    <title>Rock, Paper, Sicorss</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
@@ -16,15 +16,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rampart+One&display=swap" rel="stylesheet">
 
-
 </head>
 
 <body>
     <div class="win">
         <p>Who Won?</p>
-        <p clsss="winner-name">computer</p>
+        <p clsss="winner-name" id="winner">...</p>
     </div>
 
+  
     <div class="stand">
         <ul>
             <li class="p-win">Win</li>
@@ -42,27 +42,30 @@
 
     <div class="playerVcomputer">
         <div class="player">
-            <section class="Pchoise">
-               
-                <p id="playerChoise">
-                    PLAYER
-                    <br><br><i class='far fa-hand-rock inti-rock' ></i>
-                </p>
-               
-            </section>
+
             <div id="RPS">
 
             </div>
+            <div class="Pchoise" id="PchoiseId">    
+                <p>PLAYER</p>
+                <div class="icon">
+                    <i class='far fa-hand-rock init'></i>
+                </div>
+            </div>
+
         </div>
 
-        <section id="Cchoise">
-            <p>COMOUTER
-
-                <br><br><i class='far fa-hand-rock inti-rock' ></i>
-
-            </p>
-        </section>
+        <h1><span style="color: rgba(0, 0, 255, 0.548);"> V </span><span style="color:rgba(255, 0, 0, 0.712)">s </span></h1>
+        
+        <div class="computer">
+            <div id="Cchoise">
+                <p>COMOUTER</p>
+                <div class="icon">
+                    <i class='far fa-hand-rock init'></i>
+                </div>
+            </div>
         </div>
+    </div>
 
 
 
@@ -70,9 +73,16 @@
         <button> Play again!</button>
     </div>
     <div id="play">
-        <button> Play again!</button>
+       <button><i class="fab fa-free-code-camp"></i>
+                  <i class="fas fa-tint"></i>
+                  <i class="fas fa-tree"></i>
+    </button>
     </div>
 
+
+    <footer>
+        <p></p>
+    </footer>
 
 
 

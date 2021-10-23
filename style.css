@@ -1,22 +1,24 @@
 *{
     padding: 0;
     margin: 0;
-    font-family: 'Rampart One', cursive;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 
+}
+html{
+    border: 10px solid #183153da;
+    border-radius: 1px;
 }
 body{
-    /* background: linear-gradient(to right, #dc2424, #4a569d);  */
+    background: linear-gradient(to right, rgba(0, 0, 255, 0.151), rgba(255, 0, 0, 0.466));
+   
 }
 
-/* button{
-   
-} */
 
 .win p{
     display: flex;
     justify-content: center;
-    font-size: 50px;
-    font-family: 'Rampart One', cursive;
+    font-size: 40px;
+   
 
     
 }
@@ -33,36 +35,145 @@ body{
     display: flex;
     justify-content: center;
     justify-content: space-between;
-    margin: 0 150px 0 150px;
+    margin-left: 5%;
+    width: 90%;
+    border: 10px solid #183153 ;
+    border-radius: 20px;
+    box-shadow: 0 0.500em 10px #142946;
+    margin-bottom: 20px;
+    
 }
-.Pchoise{
-    width: 200px;
-    height: 300px;
-    background-color: rgba(0, 0, 255, 0.151);
+.playerVcomputer h1{
+margin-top: 15vh;
+font-size: 80px;
+}
+
+
+.player{
+    display: flex;
+    
+}
+
+
+.icon-rotate{
+    -ms-transform: rotate(90deg);
+    transform: rotate(90deg);
+    
 }
 
 #RPS{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content:space-around ;
 }
 
 #RPS button{
+    color: white;
+    font-size: 20px;
     width: 100px;
-    height: 50px ;
+    height: 100px ;
+   
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #183153;
+    border: none;
+    box-shadow: 0 0.375em 0 #1b4074 ;
+}
+#RPS button:hover{
+    cursor: pointer;
+    background-color: #31507c;
+    box-shadow: 0 0.375em 0 #102b52ee;
+
+}
+.Pchoise{
+    width: 400px;
+    height: 100%;
+    background-color: rgba(0, 0, 255, 0.151);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+    
+}
+.Pchoise i {
+    margin-right: 40px;
+    margin-top: 100px;
+    font-size: 100px;
+  
 }
 #Cchoise{
-    width: 200px;
-    height: 200px;
-    background-color: rgba(255, 0, 0, 0.171);
+    width: 400px;
+    height: 100%;
+    background-color: rgba(255, 0, 0, 0.466);
+    display: flex;
+    justify-content: center;
+    border-radius: 10px;
+}
+#Cchoise i {
+    margin-right: 40px;
+    margin-top: 100px;
+    font-size: 100px;
+  
+}
+#Cchoise .computerChoise{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+#Cchoise .computerChoise i{
+    margin-right: 40px;
+    margin-top: 100px;
+    font-size: 100px;
+
 }
 #play-again{
     display: flex;
     justify-content: center;
 }
-.inti-rock{
+#play-again button{
+    color: white;
+    font-size: 40px;
+    width: 350px;
+    height: 100px ;
+    margin: 10px;
+    border-radius: 20px;
+    background-color: #183153;
+    border: none;
+    box-shadow: 0 0.375em 0 #1b4074 ;
+
+}
+#play-again button:hover{
+    background-color: #31507c;
+    box-shadow: 0 0.375em 0 #102b52ee;
+    cursor: pointer;
+
+}
+
+.init {
     animation: wave-animation  4s infinite;
     font-size: 20px;
+}
 
+#play button {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+    color: white;
+    width: 50px;
+    height: 100px;
+    margin: 5px;
+    border-radius: 7px ;
+    font-size: 20px;
+    background-color: #183153;
+    box-shadow: 0 0.100em 0 #1b4074 ;
+    border: none;
+}
+#play button:hover{
+    cursor: pointer;
+    background-color: #31507c;
+    box-shadow: 0 0.100em 0 #102b52ee;
 }
 
 @keyframes wave-animation {
@@ -75,3 +186,4 @@ body{
    60% { transform: rotate( 0.0deg) }  /* Reset for the last half to pause */
   100% { transform: rotate( 0.0deg) }
 
+}
