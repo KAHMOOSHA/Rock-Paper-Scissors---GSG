@@ -46,11 +46,11 @@ var game = function () {
             for (let index = 0; index < options.length; index++) {
                 document.getElementById(options[index]).addEventListener('click', function () {
                     switch (index) {
-                        case 0: document.getElementById('PchoiseId').innerHTML = options[index] + "<br><br><i class='fas fa-tint'>";
+                        case 0: document.getElementById('PchoiseId').innerHTML = options[index] + "<i class='fas fa-tint'>";
                             break;
-                        case 1: document.getElementById('PchoiseId').innerHTML = options[index] + "<br><br><i class='fab fa-free-code-camp'>";
+                        case 1: document.getElementById('PchoiseId').innerHTML = options[index] + "<i class='fab fa-free-code-camp'>";
                             break;
-                        case 2: document.getElementById('PchoiseId').innerHTML = options[index] + "<br><br><i class='fas fa-tree'>";
+                        case 2: document.getElementById('PchoiseId').innerHTML = options[index] + "<i class='fas fa-tree'>";
                             break;
                     }
                     var buttons = document.getElementsByClassName('myChoise');
@@ -59,11 +59,11 @@ var game = function () {
                     }
                     var random = Math.floor(Math.random() * 3);
                     switch (random) {
-                        case 0: document.getElementById('Cchoise').innerHTML = options[random] + "<br><br><i class='fas fa-tint'>";
+                        case 0: document.getElementById('Cchoise').innerHTML = options[random] + "<i class='fas fa-tint'>";
                             break;
-                        case 1: document.getElementById('Cchoise').innerHTML = options[random] + "<br><br><i class='fab fa-free-code-camp'>";
+                        case 1: document.getElementById('Cchoise').innerHTML = options[random] + "<i class='fab fa-free-code-camp'>";
                             break;
-                        case 2: document.getElementById('Cchoise').innerHTML = options[random] + "<br><br><i class='fas fa-tree'>";
+                        case 2: document.getElementById('Cchoise').innerHTML = options[random] + "<i class='fas fa-tree'>";
                             break;
                     }
                     compare(options);
@@ -76,9 +76,15 @@ var game = function () {
             for (var i = 0; i < buttons.length; i++) {
                 buttons[i].disabled = false;
             }
-            document.getElementById('PchoiseId').innerHTML = "  <p>PLAYER</p><br><br><i class='far fa-hand-rock inti-rock' ></i>";
-            document.getElementById('Cchoise').innerHTML = "   <p>COMOUTER</p> <br><br><i class='far fa-hand-rock inti-rock' ></i>";
+            if(options[0] == "Rock"){
+            document.getElementById('PchoiseId').innerHTML = "  <p>PLAYER</p><i class='far fa-hand-rock inti-rock' ></i>";
+            document.getElementById('Cchoise').innerHTML = "   <p>COMOUTER</p><i class='far fa-hand-rock inti-rock' ></i>";
             document.getElementById('winner').innerText = "..."
+            } else {
+                document.getElementById('Cchoise').innerHTML = "<i class='fab fa-free-code-camp init'>";
+                document.getElementById('PchoiseId').innerHTML = "<i class='fab fa-free-code-camp init'>";
+                document.getElementById('winner').innerText = "..."
+            }
         });
     }
 
@@ -126,7 +132,7 @@ var game = function () {
                 return document.getElementById('tie').innerText = ++tie;
             } else if (player == "Water" && computer == "Wood") {
                 document.getElementById('winner').textContent = "Computer Wins!";
-                return document.getElementById('p-win').innerText = ++loose;
+                return document.getElementById('p-win').innerText = ++lose;
             } else if (player == "Fire" && computer == "Wood") {
                 document.getElementById('winner').textContent = "Player Wins!";
                 return document.getElementById('c-win').innerText = ++win;
@@ -174,14 +180,14 @@ window.addEventListener('DOMContentLoaded', function () {
             game().initOnce(options2);
             game().init(options1);
             change = false;
-            document.getElementById('PchoiseId').innerHTML = "  <p>PLAYER</p><br><br><i class='far fa-hand-rock init' ></i>";
-            document.getElementById('Cchoise').innerHTML = "   <p>COMOUTER</p> <br><br><i class='far fa-hand-rock init' ></i>";
+            document.getElementById('PchoiseId').innerHTML = "  <p>PLAYER</p><i class='far fa-hand-rock init' ></i>";
+            document.getElementById('Cchoise').innerHTML = "   <p>COMOUTER</p><i class='far fa-hand-rock init' ></i>";
         } else {
             game().initOnce(options1);
             game().init(options2);
             change = true;
-            document.getElementById('Cchoise').innerHTML = "<br><br><i class='fab fa-free-code-camp init'>";
-            document.getElementById('PchoiseId').innerHTML = "<br><br><i class='fab fa-free-code-camp init'>";
+            document.getElementById('Cchoise').innerHTML = "<i class='fab fa-free-code-camp init'>";
+            document.getElementById('PchoiseId').innerHTML = "<i class='fab fa-free-code-camp init'>";
         }
     })
 });
